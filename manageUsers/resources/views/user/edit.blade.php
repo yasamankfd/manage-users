@@ -34,21 +34,26 @@
 
                             <div class="form-group mb-3">
                                 <label>password</label>
-                                <input type="text" value="{{$user->pass}}" name="pass" class="form-control">
+                                <input type="text" value="{{$user->password}}" name="pass" class="form-control">
                             </div>
 
                             <div class="form-group mb-3">
-                                <label>avatar</label>
-                                <input type="file" name="avatar" class="form-control">
-                                <img src="{{asset('uploads/users/'.$user->avatar)}}" width="70px" height="70px" alt="Image">
+                                <label>avatar 1</label>
+                                <input type="file" name="avatar1" class="form-control">
+                                <img src="{{asset('uploads/users/'.$p1->avatar)}}" width="70px" height="70px" alt="Image">
+                            </div>
 
+                            <div>
+                                <label>avatar 2</label>
+                                <input type="file" name="avatar2" class="form-control">
+                                <img src="{{asset('uploads/users/'.$p2->avatar)}}" width="70px" height="70px" alt="Image">
                             </div>
 
                             <div class="form-group mb-3">
                                 <label for="cars">user status:</label>
                                 <select name="status" id="statuses">
-                                    <option value="1">active</option>
-                                    <option value="2">inactive</option>
+                                        <option @if($user->status==1) selected @endif selected value="1">active</option>
+                                        <option @if($user->status==2) selected @endif value="2">inactive</option>
                                 </select>
                             </div>
 

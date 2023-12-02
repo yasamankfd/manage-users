@@ -37,8 +37,13 @@
                         </div>
 
                         <div class="form-group mb-3">
-                            <label>avatar</label>
-                            <input type="file" name="avatar" class="form-control">
+                            <label>avatar 1</label>
+                            <input type="file" name="avatar1" class="form-control">
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>avatar 2</label>
+                            <input type="file" name="avatar2" class="form-control">
                         </div>
 
                         <div class="form-group mb-3">

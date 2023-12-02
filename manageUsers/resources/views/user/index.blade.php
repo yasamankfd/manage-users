@@ -30,7 +30,11 @@
                                     <td>{{ $u->lastname }}</td>
                                     <td>{{ $u->email }}</td>
                                     <td>
-                                        <img src="{{asset('uploads/users/'.$u->avatar)}}" height="70px" width="70px" alt="Image">
+                                        @foreach($profiles as $p)
+                                            @if($p->user_id == $u->id)
+                                                <img src="{{asset('uploads/users/'.$p->avatar)}}" height="70px" width="70px" alt="Image">
+                                            @endif
+                                        @endforeach
                                     </td>
                                     @if($u->status==1)
                                         <td>active</td>
