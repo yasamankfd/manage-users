@@ -42,8 +42,11 @@
                         </div>
 
                         <div class="form-group mb-3">
-                            <label>status</label>
-                            <input type="number" name="status" class="form-control">
+                            <label for="cars">user status:</label>
+                            <select name="status" id="statuses">
+                                <option value="1">active</option>
+                                <option value="2">inactive</option>
+                            </select>
                         </div>
 
                         <div class="form-group mb-3">

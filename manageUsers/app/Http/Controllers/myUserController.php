@@ -49,7 +49,7 @@ class myUserController extends Controller
         $user->email = $request ->input('email');
         $user->lastname = $request ->input('lastname');
         $user->pass = $request ->input('pass');
-        $user->status = $user->status;
+        $user->status = $request ->input('status');
         if($request->hasFile('avatar'))
         {
             $dest = 'uploads/users'.$user->avatar;
